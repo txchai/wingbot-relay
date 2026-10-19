@@ -72,6 +72,7 @@ npm run dev          # local worker; copy .dev.vars.example to .dev.vars first
 - [docs/ROUTINE_PROMPT.md](docs/ROUTINE_PROMPT.md): receiver and sender prompts
 - [docs/ADD_A_BOT_PAIR.md](docs/ADD_A_BOT_PAIR.md): more bots and pairs
 - [docs/MARKETPLACE.md](docs/MARKETPLACE.md): listing and a paste-ready bot description
+- [templates/wingbot-bot/](templates/wingbot-bot/): shareable Wingbot bot template (persona + inbox routine)
 - [SPEC.md](SPEC.md), [CONTRACT.md](CONTRACT.md): design and frozen contract
 - [SECURITY.md](SECURITY.md), [CONTRIBUTING.md](CONTRIBUTING.md)
 

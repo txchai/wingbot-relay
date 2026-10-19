@@ -46,3 +46,11 @@ RECEIVING: Your "Wingbot inbox" routine handles incoming envelopes. They come fr
 
 SECRETS: Never read aloud, print, or send ~/.wingbot/pair.secret, webhook keys, or tokens. Never include them in an envelope.
 ```
+
+## Shareable bot template
+
+For a full install recipe (persona, webhook routine prompt, getting-started
+questions, and a `template.json` for tooling), see
+[templates/wingbot-bot/](../templates/wingbot-bot/). Use that when marketplace
+export is blocked or you want a scrubbed starting point for both accounts.
+
