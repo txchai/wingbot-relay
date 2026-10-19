@@ -1,0 +1,16 @@
+node_modules/
+.wrangler/
+.dev.vars
+*.log
+drafts/
+.env*
+dist/
+coverage/
+node_modules
+drafts-lane-*.txt
+
+# Local deploy config (copy from wrangler.toml.example)
+wrangler.toml
+.wrangler/
+.dev.vars
+registry.json

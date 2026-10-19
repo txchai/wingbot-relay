@@ -1,0 +1,47 @@
+# Copy to wrangler.toml (git-ignored) and replace every <...> placeholder.
+# See docs/SETUP.md.
+name = "wingbot"
+main = "src/index.ts"
+# Pin your Cloudflare account so wrangler never deploys to the wrong one:
+account_id = "<YOUR_CLOUDFLARE_ACCOUNT_ID>"
+compatibility_date = "2026-09-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "wingbot"
+database_id = "<YOUR_D1_DATABASE_ID>"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["* * * * *"]
+
+[vars]
+REGISTRY_JSON = '''
+{
+  "version": 1,
+  "bots": [
+    {
+      "id": "personal:wingbot",
+      "webhook_url": "<PERSONAL_WEBHOOK_URL>",
+      "webhook_key_secret": "WEBHOOK_KEY_PERSONAL_WINGBOT",
+      "rate_limit_per_min": 30,
+      "enabled": true
+    },
+    {
+      "id": "work:wingbot",
+      "webhook_url": "<WORK_WEBHOOK_URL>",
+      "webhook_key_secret": "WEBHOOK_KEY_WORK_WINGBOT",
+      "rate_limit_per_min": 30,
+      "enabled": true
+    }
+  ],
+  "pairs": [
+    {
+      "name": "personal-work",
+      "bots": ["personal:wingbot", "work:wingbot"],
+      "hmac_secret": "HMAC_PAIR_PERSONAL_WORK",
+      "enabled": true
+    }
+  ]
+}
+'''

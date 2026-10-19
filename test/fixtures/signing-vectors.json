@@ -1,0 +1,18 @@
+[
+  {
+    "secret": "test-pair-secret-0123456789abcdef",
+    "bot": "personal:wingbot",
+    "body": "{}",
+    "ts": 1700000000,
+    "path": "/v1/messages",
+    "signature": "v1=d184396f36bc0593c49d444fbdae9d40bf2b061bbaa4fe041396641fae9c2ab7"
+  },
+  {
+    "secret": "0123456789abcdef",
+    "bot": "admin",
+    "body": "{ \"bot\": null, \"note\": \"café ☕\" }\n",
+    "ts": 1800000000,
+    "path": "/v1/admin/pause",
+    "signature": "v1=bf10d64ed446c706b5ae614638ce62107e3e329d3fda419607899525d6b3b8fa"
+  }
+]

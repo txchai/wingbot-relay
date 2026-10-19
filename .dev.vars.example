@@ -1,0 +1,8 @@
+# Wingbot local environment secrets (.dev.vars)
+# Copy this file to .dev.vars for local development:
+#   cp .dev.vars.example .dev.vars
+
+HMAC_PAIR_PERSONAL_WORK="replace-me"
+WEBHOOK_KEY_PERSONAL_WINGBOT="replace-me"
+WEBHOOK_KEY_WORK_WINGBOT="replace-me"
+ADMIN_HMAC="replace-me"

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "bots": [
+    {
+      "id": "personal:wingbot",
+      "webhook_url": "https://api2.cursor.sh/automations/webhook/<personal-webhook-id>",
+      "webhook_key_secret": "WEBHOOK_KEY_PERSONAL_WINGBOT",
+      "rate_limit_per_min": 30,
+      "enabled": true
+    },
+    {
+      "id": "work:wingbot",
+      "webhook_url": "https://api2.cursor.sh/automations/webhook/<work-webhook-id>",
+      "webhook_key_secret": "WEBHOOK_KEY_WORK_WINGBOT",
+      "rate_limit_per_min": 30,
+      "enabled": true
+    }
+  ],
+  "pairs": [
+    {
+      "name": "personal-work",
+      "bots": ["personal:wingbot", "work:wingbot"],
+      "hmac_secret": "HMAC_PAIR_PERSONAL_WORK",
+      "enabled": true
+    }
+  ]
+}
